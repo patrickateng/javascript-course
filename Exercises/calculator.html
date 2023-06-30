@@ -57,11 +57,30 @@
       calculation += ' * ';
       console.log(calculation);  
     ">*</button>
-    <button onclick="
-      calculation = eval(calculation);
-      console.log(calculation);  
-    ">=</button>
     </p>
+    <p>
+      <button onclick="
+        calculation += '0';
+        console.log(calculation);  
+      ">0</button>
+      <button onclick="
+        calculation += '.';
+        console.log(calculation);  
+      ">.</button>
+      <button onclick="
+        calculation = eval(calculation);
+        console.log(calculation);  
+      ">=</button>
+      <button onclick="
+        calculation += '/';
+        console.log(calculation);  
+      ">/</button>
+      </p>
+      <p>
+        <button onclick="
+          console.log('Calculation cleared!')
+        ">Clear</button>
+      </p>
 
     <script>
       let calculation = '';
