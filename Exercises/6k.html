@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Exercise 5j</title>
+    <title>Exercise 6k</title>
   </head>
   <body>
     <button onclick="
       console.log(`Cart quantity: ${cartQuantity}`);
+      if (cartQuantity > 10) {
+        alert('The cart is full')
+      } else if (cartQuantity < 0) {
+        alert('Not enough items in the cart')
+      }
       ">
       Show Quantity</button>
     <button onclick="
       cartQuantity += 1;
       console.log(`Cart quantity: ${cartQuantity}`)
+      if (cartQuantity > 10) {
+        alert('The cart is full')
+      }
     ">
     Add to Cart</button>
     <button onclick="
       cartQuantity += 2;
       console.log(`Cart quantity: ${cartQuantity}`)
+      if (cartQuantity > 10) {
+        alert('The cart is full')
+      }
     ">
     +2</button>
     <button onclick="
       cartQuantity += 3;
       console.log(`Cart quantity: ${cartQuantity}`)
+      if (cartQuantity > 10) {
+        alert('The cart is full')
+      }
     ">
     +3</button>
     <button onclick="
       cartQuantity += 4;
       console.log(`Cart quantity: ${cartQuantity}`)
+      if (cartQuantity > 10) {
+        alert('The cart is full')
+      }
     ">
     +4</button>
     <button onclick="
       cartQuantity += 5;
       console.log(`Cart quantity: ${cartQuantity}`)
+      if (cartQuantity > 10) {
+        alert('The cart is full')
+      }
     ">
     +5</button>
     <button onclick="
@@ -42,21 +62,31 @@
     <button onclick="
       cartQuantity -= 1;
       console.log(`Cart quantity: ${cartQuantity}`)
+      if (cartQuantity < 0) {
+        alert('Not enough items in the cart')
+      }
     ">
     Remove from cart</button>
     <button onclick="
       cartQuantity -= 2;
       console.log(`Cart quantity: ${cartQuantity}`)
+      if (cartQuantity < 0) {
+        alert('Not enough items in the cart')
+      }
     ">
     -2</button>
     <button onclick="
       cartQuantity -= 3;
       console.log(`Cart quantity: ${cartQuantity}`)
+      if (cartQuantity < 0) {
+        alert('Not enough items in the cart')
+      }
     ">
     -3</button>
 
     <script>
       let cartQuantity = 0;
+
     </script>
   </body>
 </html>
