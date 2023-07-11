@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 7f</title>
+  </head>
+  <body>
+    <script>
+
+      function convertTemperature(degrees, unit) {
+        if (unit === 'C') {
+          farenheit = (degrees * 9 / 5) + 32
+
+          return farenheit + 'F'
+        } else if (unit === 'F') {
+          celcius = (farenheit - 32) * 5 / 9
+
+          return celcius + 'C'
+        } else {
+          return 'Undefined letter'
+        }
+
+      }
+
+      console.log(convertTemperature(25, 'C'))
+      console.log(convertTemperature(86, 'F'))
+      console.log(convertTemperature(25, 'p'))
+
+
+    </script>
+  </body>
+</html>
