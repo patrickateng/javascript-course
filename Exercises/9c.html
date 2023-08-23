@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 9c</title>
+  </head>
+  <body>
+    <button class="js-heads" onclick="
+        headTails('heads')
+      ">heads</button>
+    <button class="js-tails" onclick="
+        headTails('tails')
+      ">tails</button>
+    <p class="js-para1"></p>
+    <script>
+      function headTails(chose) {
+
+        if (chose === 'heads') {
+          document.querySelector('.js-para1').innerHTML = `You chose: ${chose}`
+        } else if (chose === "tails") {
+          document.querySelector('.js-para1').innerHTML = `You chose: ${chose}`
+        }
+      }
+    </script>
+  </body>
+</html>

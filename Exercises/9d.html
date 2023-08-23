@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 9d</title>
+  </head>
+  <body>
+    <input class="js-name" placeholder="Name">
+    <button onclick="
+      displayName()
+    ">Submit</button>
+
+    <script>
+      function displayName() {
+        const inputElement = document.querySelector('.js-name')
+        const newVal = inputElement.value
+
+        alert(`Your name is: ${newVal}`)
+      }
+    </script>
+  </body>
+</html>
