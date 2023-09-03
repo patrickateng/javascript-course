@@ -1,22 +1,24 @@
-function toggling(name) {
+function turnOnOff(name) {
 
   const button = document.querySelector(name)
 
-  if (!button.classList.contains('its-toggled')) {
+  if (! button.classList.contains('is-toggled')) {
 
-    turnOffPreviousButton()
+    oneAtATime()
 
-    button.classList.add('its-toggled')
+    button.classList.add('is-toggled')
   } else {
-    button.classList.remove('its-toggled')
+    button.classList.remove('is-toggled')
   }
 
 }
 
-function turnOffPreviousButton () {
-  const previousButton = document.querySelector('.its-toggled')
+function oneAtATime() {
+
+  const previousButton = document.querySelector('.is-toggled')
 
   if (previousButton) {
-    previousButton.classList.remove('its-toggled')
+    previousButton.classList.remove('is-toggled')
   }
+
 }

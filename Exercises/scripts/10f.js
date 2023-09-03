@@ -1,11 +1,11 @@
-function toggling(name) {
+function turnOnOff(name) {
 
   const button = document.querySelector(name)
 
-  if (!button.classList.contains('its-toggled')) {
-    button.classList.add('its-toggled')
-  } else {
-    button.classList.remove('its-toggled')
-  }
+      if (! button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled')
+      } else {
+        button.classList.remove('is-toggled')
+      }
 
 }

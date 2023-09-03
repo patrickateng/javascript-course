@@ -1,56 +1,70 @@
 <!DOCTYPE html>
+
 <html>
+
   <head>
+
     <title>Exercise 10e</title>
     <style>
-      .is-toggled {
+
+      button {
         background-color: black;
         color: white;
-        padding: 10px 15px;
+        height: 40px;
+        padding: 10px 20px;
         border: none;
-        border-radius: 3px;
-        font-size: large;
+        border-radius: 4px;
+        font-weight: bold;
         cursor: pointer;
       }
 
-      .its-toggled {
-        background-color: white;
+      .is-toggled {
+        background-color: rgb(230 230, 230);
         color: black;
       }
 
     </style>
-  </head>
-  <body>
-    
-    <button class="is-toggled js-button" onclick="
-      const toggler = document.querySelector('.js-button')
 
-      if (!toggler.classList.contains('its-toggled')) {
-        toggler.classList.add('its-toggled')
+  </head>
+
+  <body>
+
+    <button class="js-button is-toggled" onclick="
+      
+      const button = document.querySelector('.js-button')
+
+      if (! button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled')
       } else {
-        toggler.classList.remove('its-toggled')
+        button.classList.remove('is-toggled')
       }
+
       ">Gaming</button>
 
-    <button class="is-toggled js-music-button" onclick="
-      const musicButton = document.querySelector('.js-music-button')
+    <button class="js-button2 is-toggled" onclick="
+          
+      const button2 = document.querySelector('.js-button2')
 
-      if (!musicButton.classList.contains('its-toggled')) {
-        musicButton.classList.add('its-toggled')
+      if (! button2.classList.contains('is-toggled')) {
+        button2.classList.add('is-toggled')
       } else {
-        musicButton.classList.remove('its-toggled')
+        button2.classList.remove('is-toggled')
       }
-    ">Music</button>
 
-    <button class="is-toggled js-tech-button" onclick="
-      const techButton = document.querySelector('.js-tech-button')
+      ">Music</button>
 
-      if (!techButton.classList.contains('its-toggled')) {
-        techButton.classList.add('its-toggled')
+    <button class="js-button3 is-toggled" onclick="
+          
+      const button3 = document.querySelector('.js-button3')
+
+      if (! button3.classList.contains('is-toggled')) {
+        button3.classList.add('is-toggled')
       } else {
-        techButton.classList.remove('its-toggled')
+        button3.classList.remove('is-toggled')
       }
-    ">Tech</button>
+
+      ">Tech</button>
 
   </body>
+
 </html>

@@ -1,25 +1,36 @@
 <!DOCTYPE html>
+
 <html>
+
   <head>
+
     <title>Exercise 10g</title>
     <link rel="stylesheet" href="styles/10g.css">
+
   </head>
+
   <body>
-    
-    <button class="is-toggled js-button" onclick="
-      toggling('.js-button')
+
+    <button class="js-button is-toggled" onclick="
+      
+      turnOnOff('.js-button')
+
       ">Gaming</button>
 
-    <button class="is-toggled js-music-button" onclick="
-      toggling('.js-music-button')
-    ">Music</button>
+    <button class="js-button2 is-toggled" onclick="
+          
+      turnOnOff('.js-button2')
 
-    <button class="is-toggled js-tech-button" onclick="
-      toggling('.js-tech-button')
-    ">Tech</button>
+      ">Music</button>
 
+    <button class="js-button3 is-toggled" onclick="
+          
+      turnOnOff('.js-button3')
 
-    <script src="scripts/10g.js"></script>
+      ">Tech</button>
+
+    <script src="scripts/10g.js"></script>  
 
   </body>
+
 </html>
