@@ -1,0 +1,15 @@
+.is-toggled {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  font-size: large;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.its-toggled {
+  background-color: rgb(230, 230, 230);
+  color: black;
+}

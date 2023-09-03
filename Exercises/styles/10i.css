@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+}
+
+.grey-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  font-size: 25px;
+  color: white;
+  border: none;
+  background-color: rgb(59, 59, 59);
+  margin-right: 5px;
+}
+
+.yellow-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  font-size: x-large;
+  color: white;
+  border: none;
+  background-color: orange;
+}
+
+.clear-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  background-color: rgb(59, 59, 59);
+  margin-right: 5px;
+}
