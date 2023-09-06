@@ -7,8 +7,11 @@ function turnOnOff(name) {
     oneAtATime()
 
     button.classList.add('is-toggled')
+
   } else {
+
     button.classList.remove('is-toggled')
+
   }
 
 }
@@ -18,7 +21,9 @@ function oneAtATime() {
   const previousButton = document.querySelector('.is-toggled')
 
   if (previousButton) {
+
     previousButton.classList.remove('is-toggled')
+
   }
 
 }
