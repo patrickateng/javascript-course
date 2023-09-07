@@ -1,14 +1,14 @@
-const todoList = []
+const toDoList = []
 
 function addTodo() {
-
+  
   const inputElement = document.querySelector('.js-name-input')
 
   const name = inputElement.value
 
-  todoList.push(name)
+  toDoList.push(name)
 
-  console.log(todoList)
+  console.log(toDoList)
 
   inputElement.value = ''
 
