@@ -14,22 +14,21 @@
 
       function countWords(words) {
 
-        const object1 = {}
-        let total = 0
+        const result = {}
 
-        for (let i = 0; i < words.length; i++) {
+        for (let i = 0; i < words.length; i++)
 
-          object1[words[i]] = total 
+          if (! result[words[i]]) {
 
-          if (words[i]) {
-            
-            total += 1
+            result[words[i]] = 1
+
+          } else {
+
+            result[words[i]] ++
 
           }
 
-        }
-
-        console.log(object1)
+          console.log(result)
 
       }
 
