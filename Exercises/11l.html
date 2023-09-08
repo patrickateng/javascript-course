@@ -16,29 +16,24 @@
 
         const object1 = {
 
-          'min': '',
-          'max': ''
+          'min': nums[0],
+          'max': nums[0]
 
         }
 
-        let minimum = nums[0]
-        let maximum = 0
         for (let i = 0; i < nums.length; i++) {
 
-          if (nums[i] < minimum) {
+          if (nums[i] < object1.min) {
 
-            minimum = nums[i]
+            object1.min = nums[i]
 
-          } else if (nums[i] > maximum) {
+          } else if (nums[i] > object1.max) {
 
-            maximum = nums[i]
+            object1.max = nums[i]
 
           }
 
         }
-
-        object1['min'] = minimum
-        object1['max'] = maximum
 
         console.log(object1)
 
