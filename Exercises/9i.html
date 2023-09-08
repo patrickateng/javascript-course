@@ -1,8 +1,13 @@
 <!DOCTYPE html>
+
 <html>
+
   <head>
+
     <title>Exercise 9i</title>
+
   </head>
+
   <body>
 
     <button onclick="
@@ -55,17 +60,26 @@
     <p class="js-cartPara"></p>
 
     <script>
+
       let cartQuantity = 0;
 
       function updateCartQuantity(num) {
+
         if (cartQuantity + num > 10) {
+
           alert('The cart is full')
+
         } else if (cartQuantity + num < 0) {
+
           alert('Not enough items in the cart')
+
         } else {
+
           cartQuantity += num
           document.querySelector('.js-cartPara').innerHTML = `Cart quantity: ${cartQuantity}`
+
         }
+
       }
 
       function cartQuery(num) {
@@ -73,5 +87,7 @@
       }
 
     </script>
+
   </body>
+
 </html>

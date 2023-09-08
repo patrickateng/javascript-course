@@ -1,55 +1,82 @@
 <!DOCTYPE html>
+
 <html>
+
   <head>
+
     <title>Exercise 9g</title>
+
   </head>
+
   <body>
-<P>YouTube Subscribe Button</P>
-<button class="js-subscribe-button" onclick="
-  subscribe()
-">
-  Subscribe
-</button>
 
-<p>Rock Paper Scissors</p>
-<p>Amazon Shipping Calculator</p>
-<input class="js-cost-input" placeholder="Cost of order" onkeydown="
-    handlecostKeyDown(event)
-  ">
-<button onclick="
-    calculateTotal()
-  ">Calculate</button>
+    <P>YouTube Subscribe Button</P>
 
-<p class="js-total-cost"></p>
+    <button class="js-subscribe-button" onclick="
+      subscribe()
+    ">
+      Subscribe
+    </button>
 
-<script>
+    <p>Rock Paper Scissors</p>
 
-  function handlecostKeyDown(event) {
-    if (event.key === 'Enter') {
-      calculateTotal()
-    }
-  }
+    <p>Amazon Shipping Calculator</p>
 
-  function calculateTotal() {
-    const inputElement = document.querySelector('.js-cost-input')
-    let cost = Number(inputElement.value) * 100
+    <input class="js-cost-input" placeholder="Cost of order" onkeydown="
+        handlecostKeyDown(event)
+      ">
 
-    if (cost < 40 * 100) {
-      cost += 10 * 100
-    }
+    <button onclick="
+        calculateTotal()
+      ">Calculate</button>
 
-    document.querySelector('.js-total-cost').innerHTML = `$${(cost / 100)}`
-  }
+    <p class="js-total-cost"></p>
 
-  function subscribe() {
-    const buttonElement = document.querySelector('.js-subscribe-button')
+    <script>
 
-    if (buttonElement.innerText === 'Subscribe') {
-      buttonElement.innerHTML = 'Subscribed'
-    } else {
-      buttonElement.innerHTML = 'Subscribe'
-    }
-  }
-</script>
+      function handlecostKeyDown(event) {
+
+        if (event.key === 'Enter') {
+
+          calculateTotal()
+
+        }
+
+      }
+
+      function calculateTotal() {
+
+        const inputElement = document.querySelector('.js-cost-input')
+        let cost = Number(inputElement.value) * 100
+
+        if (cost < 40 * 100) {
+
+          cost += 10 * 100
+
+        }
+
+        document.querySelector('.js-total-cost').innerHTML = `$${(cost / 100)}`
+
+      }
+
+      function subscribe() {
+
+        const buttonElement = document.querySelector('.js-subscribe-button')
+
+        if (buttonElement.innerText === 'Subscribe') {
+
+          buttonElement.innerHTML = 'Subscribed'
+
+        } else {
+
+          buttonElement.innerHTML = 'Subscribe'
+          
+        }
+
+      }
+
+      </script>
+
 </body>
+
 </html>
