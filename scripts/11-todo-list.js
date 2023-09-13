@@ -24,7 +24,15 @@ function renderTodoList() {
   for (let i = 0; i < todoList.length; i++) {
 
     const todo = todoList[i]
-    const html = `<P>${todo}</p>`
+    const html = `
+        <P>
+          ${todo}
+            <button class="" onclick="
+              todoList.splice(${i}, 1)
+              renderTodoList()
+            ">Delete</button>
+        </p>
+      `
 
     todoListHTML += html
 
