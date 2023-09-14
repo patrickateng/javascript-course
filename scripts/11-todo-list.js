@@ -1,4 +1,14 @@
-const todoList = []
+const todoList = [{
+
+  name: 'make dinner',
+  dueDate: '2022-09-14'
+
+}, {
+
+  name: 'wash dishes',
+  dueDate: '2022-09-14'
+
+}]
 
 
 function addTodo() {
@@ -7,11 +17,22 @@ function addTodo() {
 
   const name = inputElement.value
 
-  todoList.push(name)
+  const dueDateInputElement = document.querySelector('.js-due-date-input')
+
+  const dueDate = dueDateInputElement.value
+
+  todoList.push({
+    // name: name,
+    // dueDate: dueDate.   If the property and the variable name are the same we can just
+    // type it out once. The lines below do the same as the lines above
+    name,
+    dueDate
+  })
 
   console.log(todoList)
 
   inputElement.value = ''
+  dueDateInputElement.value = ''
 
   renderTodoList()
   
@@ -23,10 +44,13 @@ function renderTodoList() {
 
   for (let i = 0; i < todoList.length; i++) {
 
-    const todo = todoList[i]
+    const todoObject = todoList[i]
+    // const name = todoObject.name   this means the same as the next line
+    const {name, dueDate} = todoObject
+    // const dueDate = todoObject.dueDate   This line has been included in the object above.
     const html = `
         <P>
-          ${todo}
+          ${name} ${dueDate}
             <button class="" onclick="
               todoList.splice(${i}, 1)
               renderTodoList()
