@@ -1,12 +1,31 @@
-const todoList = []
+const todoList = [{
+
+  name: '',
+  dueDate: ''
+
+}]
+
+function addKeyDown(event) {
+
+  if (event.key === 'Enter') {
+
+    addTodo()
+    
+  }
+
+}
 
 function addTodo() {
 
-  const inputElement = document.querySelector('.js-todo-list-input')
+  const inputElement = document.querySelector('.js-todo')
 
   const name = inputElement.value
 
-  todoList.push(name)
+  const dueDateInput = document.querySelector('.js-todo-dueDate')
+
+  const dueDate = dueDateInput.value
+
+  todoList.push({name, dueDate})
 
   console.log(todoList)
 
@@ -14,31 +33,36 @@ function addTodo() {
 
   renderTodoList()
 
+
 }
 
 function renderTodoList() {
 
-  let todoListHTML = ''
+  let todoListHtml = ''
 
-  for(let i = 0; i < todoList.length; i++) {
+  for (let i = 0; i < todoList.length; i++) {
 
-    const name = todoList[i]
+    const todoObject = todoList[i]
 
-    const html = `
-      <p>${name} <button onclick="
+    const {name, dueDate} = todoObject
+
+    const html = `<p>
+
+        ${name} ${dueDate}
+
+        <button class="delete-button" onclick="
+        
+          todoList.splice(${i}, 1)
+          renderTodoList()
+        
+        ">Delete</button>
     
-      todoList.splice(${i}, 1)
-      renderTodoList()
-      ">
-      Delete
-      </button>
-      </p>
-      `
+      </p>`
 
-    todoListHTML += html
+    todoListHtml += html
 
   }
 
-  document.querySelector('.js-todo-List-output').innerHTML = todoListHTML
+  document.querySelector('.js-todo-list').innerHTML = todoListHtml
 
 }

@@ -10,6 +10,16 @@ const todoList = [{
 
 }]
 
+function addKeyDown(event) {
+
+  if (event.key === 'Enter') {
+
+    addTodo()
+
+  }
+  
+}
+
 
 function addTodo() {
   

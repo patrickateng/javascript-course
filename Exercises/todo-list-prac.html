@@ -4,25 +4,26 @@
 
   <head>
 
-    <title>todo-list Practice</title>
+    <title>Todo List Practice</title>
+    <link rel="stylesheet" href="styles/todo-list-prac.css">
 
   </head>
 
   <body>
 
-    <p>My todo List Practice</p>
+    <p>Todo List Practice</p>
 
-    <input class="js-todo-list-input" placeholder="Todo name">
+    <input placeholder="Todo name" class="js-todo" onkeydown="
+    
+      addKeyDown(event)
+    
+    ">
 
-    <button onclick="
+    <input type="date" class="js-todo-dueDate">
 
-      addTodo()
+    <button class="add-button" onclick="addTodo()">Add</button>
 
-      ">
-      Add
-    </button>
-
-    <div class="js-todo-List-output"></div>
+    <div class="js-todo-list"></div>
 
     <script src="scripts/todo-list-prac.js"></script>
 
