@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Exercise 11r</title>
+
+  </head>
+
+  <body>
+
+    <script>
+
+      function removeEgg(food) {
+
+        const food_list = []
+
+        for (i = 0; i < food.length; i++) {
+
+          if (food[i] == 'egg') {
+
+            continue
+            
+          } else {
+
+            food_list.push(food[i])
+
+          }
+        }
+
+        console.log(food_list)
+
+      }
+
+      removeEgg(['egg', 'apple', 'egg', 'egg', 'ham'])
+
+    </script>
+
+  </body>
+
+</html>

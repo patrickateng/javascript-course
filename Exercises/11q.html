@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Exercise 11q</title>
+
+  </head>
+
+  <body>
+
+    <script>
+
+      function findIndex(array, word) {
+
+        for (i = 0; i < array.length; i++) {
+
+          if (array[i] === word) {
+
+            console.log(i)
+            return
+
+          }
+
+        }
+
+        console.log(-1)
+
+      }
+
+      findIndex(['green', 'red', 'blue', 'red'], 'red')
+      findIndex(['green', 'red', 'blue', 'red'], 'yellow')
+      
+
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Exercise 11o</title>
+
+  </head>
+
+  <body>
+
+    <script>
+
+function findSearch(strArray) {
+
+  for (i = 0; i < strArray.length; i++) {
+
+      if (strArray[i] === 'search') {
+
+        console.log(i)
+        return
+
+      } 
+
+  }
+
+  console.log(-1)
+
+}
+
+      l1 = ['hello', 'world', 'search', 'good']
+      l2 = ['not', 'found']
+
+      findSearch(l1)
+      findSearch(l2)
+
+
+    </script>
+
+  </body>
+  
+</html>

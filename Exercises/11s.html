@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Exercise 11s</title>
+
+  </head>
+
+  <body>
+
+    <script>
+
+      function removeEgg(food) {
+
+        const food_list = []
+
+        for (let i = 0; i < food.length; i++) {
+
+          if (food[i] === 'egg') {
+
+            food_list.push(i)
+            food.splice(i, 1)
+
+            if (food_list.length === 2) {
+
+              console.log(food)
+
+            }
+
+          }
+
+        }
+
+      }
+
+      removeEgg(['egg', 'apple', 'egg', 'egg', 'ham'])
+
+    </script>
+
+  </body>
+
+</html>
