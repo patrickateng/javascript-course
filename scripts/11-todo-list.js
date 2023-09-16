@@ -1,12 +1,12 @@
 const todoList = [{
 
   name: 'make dinner',
-  dueDate: '2022-09-14'
+  dueDate: '2023-09-16'
 
 }, {
 
   name: 'wash dishes',
-  dueDate: '2022-09-14'
+  dueDate: '2023-09-16'
 
 }]
 
@@ -17,7 +17,7 @@ function addKeyDown(event) {
     addTodo()
 
   }
-  
+
 }
 
 
@@ -39,8 +39,6 @@ function addTodo() {
     dueDate
   })
 
-  console.log(todoList)
-
   inputElement.value = ''
   dueDateInputElement.value = ''
 
@@ -59,13 +57,14 @@ function renderTodoList() {
     const {name, dueDate} = todoObject
     // const dueDate = todoObject.dueDate   This line has been included in the object above.
     const html = `
-        <P>
-          ${name} ${dueDate}
-            <button class="" onclick="
-              todoList.splice(${i}, 1)
-              renderTodoList()
-            ">Delete</button>
-        </p>
+        <div>${name}</div>
+        <div>${dueDate}</div>
+        <button class="delete-todo-button" onclick="
+            todoList.splice(${i}, 1)
+            renderTodoList()
+          ">
+          Delete
+        </button>
       `
 
     todoListHTML += html

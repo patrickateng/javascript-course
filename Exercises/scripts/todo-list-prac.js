@@ -10,7 +10,7 @@ function addKeyDown(event) {
   if (event.key === 'Enter') {
 
     addTodo()
-    
+
   }
 
 }
@@ -50,12 +50,15 @@ function renderTodoList() {
 
         ${name} ${dueDate}
 
-        <button class="delete-button" onclick="
+          <button class="delete-button" onclick="
         
-          todoList.splice(${i}, 1)
-          renderTodoList()
+            todoList.splice(${i}, 1)
+            renderTodoList()
         
-        ">Delete</button>
+          ">
+            Delete
+            
+          </button>
     
       </p>`
 
