@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Exercise 11u</title>
+
+  </head>
+
+  <body>
+
+    <script>
+
+      function removeEgg(food) {
+
+        const reversed_food = food.slice()
+        reversed_food.reverse()
+
+        const food_list = []
+        let count  = 0
+
+        for (let i = 0; i < reversed_food.length; i++) {
+
+          if (reversed_food[i] === 'egg' && count < 2) {
+
+            count ++
+            continue
+
+          } 
+
+          food_list.push(reversed_food[i])
+
+        }
+
+        console.log(food_list.reverse())
+        console.log(food)
+
+      }
+
+      removeEgg(['egg', 'apple', 'egg', 'egg', 'ham'])
+
+    </script>
+
+  </body>
+
+</html>

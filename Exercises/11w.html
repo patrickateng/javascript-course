@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Exercise 11w</title>
+
+  </head>
+
+  <body>
+
+    <script>
+
+      function findIndex(array, word) {
+
+        for (let i = 0; i < array.length; i++) {
+
+          if (array[i] === word) {
+
+            return i
+          }
+        }
+
+        return -1
+
+      }
+
+      function unique(array) {
+
+        const unique_array = []
+
+        for (let i = 0; i < array.length; i++) {
+
+          const word = array[i]
+
+          if (findIndex(unique_array, word) === -1) {
+
+            unique_array.push(word)
+          }
+        }
+
+        return unique_array
+      }
+
+      console.log(unique(['green', 'red', 'blue', 'red']))
+      console.log(unique(['red', 'green', 'green', 'red']))
+
+    </script>
+
+  </body>
+
+</html>
