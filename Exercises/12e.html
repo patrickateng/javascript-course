@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Exercise 12e</title>
+
+  </head>
+
+  <body>
+
+    <button class="js-button" onclick="
+      
+        updateMessage()
+      
+      ">Add to cart</button>
+
+    <p class="js-message"></p>
+
+    <script>
+
+      function updateMessage() {
+
+        const message = document.querySelector('.js-message')
+
+        message.innerHTML = 'added'
+
+        setTimeout(function() {
+
+          message.innerHTML = ''
+
+        }, 2000)
+
+      }
+
+    </script>
+
+  </body>
+
+</html>

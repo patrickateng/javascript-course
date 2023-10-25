@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Exercise 12i</title>
+
+  </head>
+
+  <body>
+
+    <button onclick="
+      
+        messages++
+      
+      ">Add</button>
+
+    <button onclick="
+    
+        messages--
+    
+      ">Remove</button>
+
+    <script>
+
+      let messages = 2
+
+      setInterval(function() {
+
+        if(document.title === 'App') {
+
+          document.title = `(${messages}) New messages`
+
+          if(messages < 0) {
+
+            document.title = 'App'
+            
+          }
+
+        } else {
+
+          document.title = 'App'
+
+        }
+
+      }, 1000)
+
+    </script>
+
+  </body>
+
+</html>
