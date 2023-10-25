@@ -20,9 +20,14 @@ let isAutoplaying = false
 
 let intervalId  
 
+// const autoplay = () => {
+
+// }
+
+
 function autoplay() {
   if (!isAutoplaying) {
-    intervalId = setInterval(function() {
+    intervalId = setInterval(() => {
       const playerMove = pickComputerMove()
       playGame(playerMove)
     }, 1000)
