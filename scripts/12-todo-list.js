@@ -20,6 +20,10 @@ function addKeyDown(event) {
 
 }
 
+document.querySelector('.js-add-todo-button').addEventListener('click', () => {
+  addTodo()
+})
+
 
 function addTodo() {
   
@@ -55,10 +59,7 @@ function renderTodoList() {
     const html = `
         <div>${name}</div>
         <div>${dueDate}</div>
-        <button class="delete-todo-button" onclick="
-            todoList.splice(${index}, 1)
-            renderTodoList()
-          ">
+        <button class="delete-todo-button js-delete-todo-button">
           Delete
         </button>
       `
@@ -68,5 +69,12 @@ function renderTodoList() {
   })
 
   document.querySelector('.js-todo-list').innerHTML = todoListHTML
+
+  document.querySelectorAll('.js-delete-todo-button').forEach((delete_button, index) => {
+    delete_button.addEventListener('click', () => {
+      todoList.splice(index, 1)
+      renderTodoList()
+    })
+  })
 
 }
